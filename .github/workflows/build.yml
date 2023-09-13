@@ -39,7 +39,7 @@ jobs:
           npm ci --force
       - name: Update Version
         run: |
-            sed -i "s/v1.2/v$(date '+%s')/g" src/app/app.component.html
+            sed -i "s/v1.2/v$(date '+%Y_%m_%d__%H_%M_%S')/g" src/app/app.component.html
       - name: Build
         run: |
           npm run build --force
