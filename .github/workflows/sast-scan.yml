@@ -44,7 +44,7 @@ jobs:
           unzip dependency-check.zip
       - name: Run scan with ODC
         run: |
-          dependency-check/bin/dependency-check.sh --project "bitcoin" --scan . -f HTML -o ODC-report.html -l debug.log
+          dependency-check/bin/dependency-check.sh --project "bitcoin" --scan . -f HTML -o ODC-report.html
           zip odc.zip ODC-report.html debug.log
 
       - name: Archive production artifacts
